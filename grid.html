@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- the below meta tag is default in most modern browsers. however if you have an
+  older browser, the emojis may not show up properly. In which case you need this meta
+  tag. Read more here: https://teamtreehouse.com/community/meta-charsetutf8-what-does-this-mean-or-what-does-it-do-i-deleted-it-from-the-code-and-nothing-changed -->
+  <meta charset="utf-8" >  
+  <title>Grid Master</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script type="text/javascript" src="jquery-3.5.1.js"></script>
+   <script type="text/javascript" src="grid.js"></script>
+  <link rel="stylesheet" type="text/css" href="gridstyle.css">
+</head>
+<body>
+<div class="navbar">
+	<div id="logo">
+		<h1>Your Logo</h1>
+	</div>
+	<div class="btn">
+	   <input type="color" id="color" name="favcolor" value="#ff0000">
+	   <input type="color" id="color2" name="favcolor" value="#ffff00">
+	</div>
+	<div id="links">
+		<a href="">facebook</a>
+		<a href="">twitter</a>
+		<a href="">Blog</a>
+		<i class="fas fa-bars"></i>
+
+	</div>
+	</div>
+	<div class="sidebar">
+		<a href="">facebook</a>
+		<a href="">twitter</a>
+		<a href="">Blog</a>
+	</div>
+
+ <div class="container">
+  <div class="zone green">🦊</div>
+  <div class="zone red">🐰</div>
+  <div class="zone blue">🐸</div>
+  <div class="zone yellow">🦁</div>
+  <div class="zone purple">🐯</div>
+  <div class="zone brown">🐭</div>
+  <div class="zone green">🦄</div>
+  <div class="zone red">🐲</div>
+  <div class="zone blue">🐷</div>
+  <div class="zone yellow">🐺</div>
+  <div class="zone purple">🐼</div>
+  <div class="zone brown">🐻</div>
+</div>
+<script type="text/javascript">
+var color=document.getElementById("color");
+var color2=document.getElementById("color2");
+var body= document.querySelector(".navbar");
+function colorChange()
+{
+	 body.style.background=`linear-gradient(to right, ${color.value} , ${color2.value})`;
+}
+color.addEventListener("input", function(){
+   
+   colorChange();
+})
+color2.addEventListener("input", colorChange);
+</script>
+</body>
+</html>
